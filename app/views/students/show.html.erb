@@ -1,1 +1,11 @@
+<% %>
 <h1><%= @student.to_s %></h1>
+<% if @student.active == false %>
+<% id = @student.id %>
+<a href='<%= id %>/activate'>activate</a>
+
+<h1>This student is currently inactive.</h1> 
+<% else %>
+
+<h1>This student is currently active.</h1> 
+<% end %>
